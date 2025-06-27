@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>小宇宙播放器</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px 20px 24px 20px;
+        width: 350px;
+        min-height: 200px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      .container {
+        text-align: center;
+      }
+      h1 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .play-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+      .play-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+      .info {
+        margin-top: 20px;
+        font-size: 12px;
+        opacity: 0.8;
+        word-break: break-all;
+        white-space: pre-line;
+        text-align: left;
+        max-width: 100%;
+      }
+      .dynamic-title {
+        display: block;
+        margin: 0 auto 0.5em auto;
+        font-size: 15px;
+        font-weight: bold;
+        max-width: 100%;
+        word-break: break-all;
+        white-space: pre-line;
+        text-align: center;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>小宇宙播放器</h1>
+      <div style="margin-bottom: 12px; display: flex; gap: 8px; align-items: flex-start;">
+        <div style="flex:1; display: flex; flex-direction: column; gap: 2px;">
+          <input id="linkInput" type="text" placeholder="粘贴播客单集地址" style="padding: 6px 8px; border-radius: 6px; border: none; font-size: 13px; width: 100%; box-sizing: border-box;" />
+          <span class="info" style="margin: 0; font-size: 12px; opacity: 0.8; line-height: 1.6;">https://xyzrank.com 页面右键，选择"添加到播放器"</span>
+        </div>
+        <button id="addLinkBtn" class="play-btn" style="padding: 6px 14px; font-size: 13px; height: 36px; align-self: flex-start;">添加</button>
+      </div>
+      <span id="dynamicTitle" class="dynamic-title"></span>
+      <button id="playBtn" class="play-btn">播放音频</button>
+      <div id="progressContainer" style="display: flex; align-items: center; margin-top: 10px;">
+        <span id="currentTime" style="font-size: 12px; min-width: 40px;">00:00</span>
+        <input type="range" id="progressBar" min="0" max="100" value="0" step="0.1" style="flex: 1; margin: 0 8px;">
+        <span id="duration" style="font-size: 12px; min-width: 40px; text-align: right;">00:00</span>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
+

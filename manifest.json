@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "小宇宙",
+    "version": "1.0",
+    "description": "小宇宙播放器插件",
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "activeTab",
+        "windows",
+        "offscreen"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["scripts/content.js"]
+        }
+    ]
+}
