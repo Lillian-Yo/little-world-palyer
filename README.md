@@ -8,3 +8,5 @@
 
 方式3：在https://xyzrank.com/#/ 页面播客单集标题上右键-添加到播放器，关闭浏览器tab页也可以播放~
 ![本地图片](images/listrightclick.png)
+
+声明：请勿用于商业用途，尊重小宇宙及播客创作者版权~
